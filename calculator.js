@@ -34,7 +34,13 @@ const even = function(number){
     }
 };
 
-const odd = null;
+const odd = function(number){
+    if(modulus(number, 2) === 0) {
+        return false;
+    } else{
+        return true;
+    }
+};
 
 module.exports = { 
     sum, 

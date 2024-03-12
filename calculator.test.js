@@ -202,4 +202,16 @@ describe('even', () => {
 
 describe('odd', () => {
 
+  test("returns true for odd numbers", () => {
+    const expected = true;
+    const actual = odd(11);
+    expect(actual).toBe(expected);
+  })
+
+  test("returns false for odd numbers", () => {
+    const expected = false;
+    const actual = odd(4);
+    expect(actual).toBe(expected);
+  })
+
 });

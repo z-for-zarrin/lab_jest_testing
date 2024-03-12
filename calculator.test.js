@@ -72,6 +72,36 @@ describe('subtract', () => {
 
 describe('multiply', () => {
 
+  test('can multiply two small positive numbers', () => {
+    const expected = 6;
+    const actual = multiply(2, 3);
+    expect(actual).toBe(expected);
+  })
+
+  test('can multiply two large positive numbers', () => {
+    const expected = 16_719_002;
+    const actual = multiply(5246, 3187);
+    expect(actual).toBe(expected);
+  })
+
+  test('can multiply a negative and positive number', () => {
+    const expected = -6;
+    const actual = multiply(2, -3);
+    expect(actual).toBe(expected);
+  })
+
+  test('can multiply two negative numbers', () => {
+    const expected = 28;
+    const actual = multiply(-4, -7);
+    expect(actual).toBe(expected);
+  })
+
+  test('can multiply by zero', () => {
+    const expected = 0;
+    const actual = multiply(2, 0);
+    expect(actual).toBe(expected);
+  })
+
 });
 
 describe('divide', () => {

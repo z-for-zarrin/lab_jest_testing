@@ -6,7 +6,9 @@ const subtract = function(a, b){
     return a - b;
 };
 
-const multiply = null;
+const multiply = function(a, b){
+    return a * b;
+};
 
 const divide = null;
 

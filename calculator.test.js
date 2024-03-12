@@ -152,6 +152,36 @@ describe('divide', () => {
 
 describe('modulus', () => {
 
+  test('can find small number modulo another small number', () => {
+    const expected = 2;
+    const actual = modulus(14, 4);
+    expect(actual).toBe(expected);
+  })
+
+  test('can find large number modulo small number', () => {
+    const expected = 1;
+    const actual = modulus(1436, 7);
+    expect(actual).toBe(expected);
+  })
+
+  test('can find large number modulo another large number', () => {
+    const expected = 878;
+    const actual = modulus(4162, 1642);
+    expect(actual).toBe(expected);
+  })
+
+  test("won't take non-positive modulus", () => {
+    const expected = "Modulus must be a positive integer!";
+    const actual = modulus(10, -2);
+    expect(actual).toBe(expected);
+  })
+
+  test('can find negative number modulo a positive number', () => {
+    const expected = -4;
+    const actual = modulus(-24, 5);
+    expect(actual).toBe(expected);
+  })
+
 });
 
 describe('even', () => {

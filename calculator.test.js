@@ -186,6 +186,18 @@ describe('modulus', () => {
 
 describe('even', () => {
 
+  test("returns true for even numbers", () => {
+    const expected = true;
+    const actual = even(6);
+    expect(actual).toBe(expected);
+  })
+
+  test("returns false for odd numbers", () => {
+    const expected = false;
+    const actual = even(7);
+    expect(actual).toBe(expected);
+  })
+
 });
 
 describe('odd', () => {

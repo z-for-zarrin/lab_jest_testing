@@ -118,6 +118,12 @@ describe('divide', () => {
     expect(actual).toBe(expected);
   })
 
+  test('can divide large numbers', () => {
+    const expected = 600;
+    const actual = divide(180_000, 300);
+    expect(actual).toBe(expected);
+  })
+
   test('can divide a positive and negative number', () => {
     const expected = -3;
     const actual = divide(-12, 4);

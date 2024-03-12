@@ -18,7 +18,13 @@ const divide = function(a, b){
     }
 };
 
-const modulus = null;
+const modulus = function(number, modulus){
+    if(modulus > 0){
+        return number % modulus;
+    } else{
+        return "Modulus must be a positive integer!";
+    }
+};
 
 const even = null;
 

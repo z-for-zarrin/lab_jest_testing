@@ -106,6 +106,42 @@ describe('multiply', () => {
 
 describe('divide', () => {
 
+  test('can divide small positive number by positive factor', () => {
+    const expected = 3;
+    const actual = divide(12, 4);
+    expect(actual).toBe(expected);
+  })
+
+  test('can divide small positive number by positive number that is not a factor', () => {
+    const expected = 3.25;
+    const actual = divide(13, 4);
+    expect(actual).toBe(expected);
+  })
+
+  test('can divide a positive and negative number', () => {
+    const expected = -3;
+    const actual = divide(-12, 4);
+    expect(actual).toBe(expected);
+  })
+
+  test('can divide two negative numbers', () => {
+    const expected = 3;
+    const actual = divide(-12, -4);
+    expect(actual).toBe(expected);
+  })
+
+  test("won't divide by zero", () => {
+    const expected = "Can't divide by zero!";
+    const actual = divide(10, 0);
+    expect(actual).toBe(expected);
+  })
+
+  test('can divide zero', () => {
+    const expected = 0;
+    const actual = divide(0, 2);
+    expect(actual).toBe(expected);
+  })
+
 });
 
 describe('modulus', () => {

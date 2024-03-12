@@ -26,7 +26,13 @@ const modulus = function(number, modulus){
     }
 };
 
-const even = null;
+const even = function(number){
+    if(modulus(number, 2) === 0) {
+        return true;
+    } else{
+        return false;
+    }
+};
 
 const odd = null;
 
